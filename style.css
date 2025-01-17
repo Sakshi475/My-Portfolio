@@ -1,0 +1,542 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: black;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    margin: 10px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 8px 16px;
+    font-style: normal;
+}
+
+/* Mobile Screen Responsiveness */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;  /* Stack the nav items vertically */
+        align-items: center;  /* Center the items */
+    }
+
+    .navbar li {
+        margin: 8px 0;  /* Reduce the margin between list items */
+    }
+
+    .navbar a {
+        font-size: 18px;  /* Slightly smaller font size for mobile screens */
+        padding: 6px 12px;  /* Adjust padding for smaller screens */
+    }
+}
+
+/* Desktop Screen Responsiveness */
+@media (min-width: 769px) {
+    .navbar ul {
+        flex-direction: row;  /* Keep items in a row for desktop */
+        justify-content: center;  /* Ensure the items are centered */
+    }
+
+    .navbar a {
+        font-size: 20px;  /* Larger font size for desktop screens */
+        padding: 8px 16px;  /* Padding adjusted for larger screens */
+    }
+}
+
+.about {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.about-image img {
+    border-radius: 50%;  /* Keeps the circular shape */
+    box-shadow: 5px 5px 5px 10px rgba(46, 13, 231, 0.1);  /* Apply a soft shadow around the image */
+    width: 70%;  /* Ensure the image fills the container */
+    height: 70%;  /* Ensure the image fills the container */
+    object-fit: contain;  /* Ensure the image fits well without being cropped */
+}
+
+
+.about-description {
+    max-width: 600px;
+    font-size: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about-description h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.about-description p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.button {
+    color: rgb(12, 0, 0);
+    background-color: #f9f9f9;
+    border: none;
+    padding: 10px 15px;
+    font-size: 15px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Body and Container Styling */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+.container {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Qualifications Section */
+.Qualifications {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+}
+
+.Qualifications-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.Qualifications h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #333;
+    text-decoration: underline;
+}
+
+.qualification-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; /* Ensures wrapping on smaller screens */
+}
+
+.qualification-item {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    margin-bottom: 20px; /* Ensures space between items */
+}
+
+.qualification-item h3 {
+    color: #2c3e50;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.qualification-item p {
+    color: #555;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.qualification-item strong {
+    font-weight: bold;
+}
+
+/* Skills Section */
+.skills {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.skills h1 {
+    text-decoration: underline;
+}
+
+/* Skills Grid Layout */
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.skill-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.skill-item img {
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+}
+
+/* Projects Section */
+.projects {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.projects h2 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: #333;
+    text-decoration: underline;
+}
+
+.project-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    background-color: #f3f3f3;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 48%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 15px;
+}
+
+.project-info h3 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.project-info h4 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.project-info ul {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 1rem;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.project-info ul li {
+    margin-bottom: 8px;
+}
+
+.project-info ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+}
+
+/* Contact Section */
+.Contact {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.Contact .container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.Contact h2 {
+    font-size: 1.8rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+.Contact label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.Contact input[type="text"],
+.Contact textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.Contact textarea {
+    height: 100px;
+}
+
+.Contact input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.Contact textarea {
+    height: 150px;
+}
+
+.Contact input[type="submit"] {
+    color: white;
+    background-color: #5c5ce2;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Footer Section Styling */
+.footer {
+    background-color: #333; /* Dark background for contrast */
+    color: white; /* White text for contrast */
+    padding: 20px 0;
+    text-align: center;
+    font-size: 1.1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Footer Content */
+.footer-content p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Social Icons Container */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 10px;
+}
+
+/* Individual Social Icon */
+.social-icon img {
+    width: 40px; /* Size of the icon */
+    height: 40px; /* Height of the icon */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    border-radius: 50%;
+    border: 2px solid #ecf0f1;
+    padding: 10px;
+    background-color: #3f5469;
+}
+
+/* Hover Effect on Icons */
+.social-icon img:hover {
+    transform: scale(1.2);
+    opacity: 0.9;
+    border-color: #3498db; /* Blue border on hover */
+}
+
+
+/* Media Queries for Responsiveness */
+
+/* Tablet and Small Screens */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-description {
+        text-align: center;
+    }
+
+    .qualification-item {
+        width: 100%; /* Makes the qualification items full-width */
+        margin-bottom: 20px;
+    }
+
+    .skill-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+    }
+
+    .project-card {
+        width: 100%; /* Full-width cards */
+    }
+
+    .Contact .container {
+        width: 80%; /* Larger form on mobile */
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+    .navbar a {
+        font-size: 16px;
+    }
+
+    .about-description h2 {
+        font-size: 1.8rem;
+    }
+
+    .button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .qualification-item {
+        width: 100%; /* Full width */
+    }
+
+    .skill-grid {
+        grid-template-columns: repeat(1, 1fr); /* 1 item per row */
+    }
+
+    .project-card {
+        width: 100%; /* Full-width cards */
+    }
+
+    .Contact .container {
+        width: 90%; /* Wider form container on small screens */
+    }
+}
+
+
+/* Certifications Section */
+.certifications {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+}
+
+.certifications-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.certifications h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #333;
+    text-decoration: underline;
+}
+
+.certifications-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; /* Ensures wrapping on smaller screens */
+}
+
+.certificate-item {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 30%; /* Ensures certificates take up 30% of the width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.certificate-item h3 {
+    color: #2c3e50;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    background-color: rgb(89, 191, 238);
+    color: white;
+    padding: 10px;
+}
+
+.certificate-item p {
+    color: #555;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.certificate-item strong {
+    font-weight: bold;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .certificate-item {
+        width: 100%; /* Makes each certificate take full width on smaller screens */
+    }
+}
